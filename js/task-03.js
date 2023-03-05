@@ -1,4 +1,4 @@
-// const list = document.querySelector(".gallery");
+
 
 const images = [
   {
@@ -16,7 +16,10 @@ const images = [
 ];
 
 const markup = images
-  .map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
+  .map(
+    (image) =>
+      `<li><img height=400; src="${image.url}" alt="${image.alt}"></li>`
+  )
   .join("");
 
 
@@ -26,19 +29,5 @@ list.style.cssText = `
 display: flex;
 list-style: none;
 gap: 30px`;
-
-
-// const listElem = document.querySelector("markup");
-// console.log(listElem)
-
-// const qwer = document.querySelector("ul.li");;
-// console.log(qwer);
-// const qwer = document.body;
-// const rewq = qwer.children;
-// console.log( rewq)
-
-// qwer.style.cssText = `
-// height: 200px;
-// wigth: 200px;`;
 
 list.insertAdjacentHTML("afterbegin", markup);
