@@ -17,6 +17,7 @@ const images = [
 const list = document.querySelector(".gallery");
 list.style.cssText = `
 display: flex;
+flex-direction: column;
 list-style: none;
 gap: 30px`;
 
@@ -24,7 +25,7 @@ gap: 30px`;
 const markup = images
   .map(
     (image) =>
-      `<li><img height=400; src="${image.url}" alt="${image.alt}"></li>`
+      `<li><img width=1000; src="${image.url}" alt="${image.alt}"></li>`
   )
   .join("");
 
